@@ -4,7 +4,9 @@
   "description": "A sample app to showcase Redis caching and how it affects an app overall performance benchmark",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "build": "npx tsc",
+    "start": "node dist/index.js",
+    "dev": "nodemon src/index.ts"
   },
   "keywords": [
     "Node.js",
@@ -38,6 +40,7 @@
     "@types/nodemon": "^1.19.6",
     "@types/redis": "^4.0.11",
     "morgan": "^1.10.0",
-    "nodemon": "^3.0.3"
+    "nodemon": "^3.0.3",
+    "typescript": "^5.3.3"
   }
 }
