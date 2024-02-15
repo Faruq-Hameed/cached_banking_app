@@ -1,19 +1,33 @@
 // src/index.js
-import express, { Express, Request, Response } from "express";
+import express, { Express, NextFunction, Request, Response } from "express";
 import dotenv from "dotenv";
-
-
-
+// import { config } from "./config";
+//import routes from "./routes";
 dotenv.config();
 
 const app: Express = express();
 const port = process.env.PORT || 3000;
 
+// parse application/json
+app.use(express.json());
+// parse application/x-www-form-urlencoded
+app.use(express.urlencoded({ extended: true }));
+
 
 app.get("/", (req: Request, res: Response) => {
-  res.send("Express + TypeScript Server");
+    res.status(200).send('Welcome to the Node.js Cache and Performance App')
 });
 
+interface CustomError extends Error {
+    status?: number
+}
+// catch 404 and forward to error handler
+app.use((req: Request, res: Response, next: NextFunction) => {
+    const err: CustomError = new Error('Not Found')
+    err.status = 404
+    res.send('Route not found')
+    next(err)
+})
 
 app.listen(port, () => {
   console.log(`[server]: Server is running at http://localhost:${port}`);
