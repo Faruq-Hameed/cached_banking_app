@@ -3,11 +3,20 @@ function bubbleSort(arr: Array<number>, n: number): void{
     let result = [];
     for ( let i = 0; i < n; i++ ){
         
-        for (let j = 0; j < n; j++ ){
-            let a = arr[i], b = arr[j];
+            let a = arr[i], b = arr[i + 1];
             if ( a < b ){
                 result[i] = a;
             }
+            else {
+                result[i] = b;
+            }
+
+        for (let j = 0; j < n; j++ ){
+           let c = result[j], d = arr[j + 1];
     }
+
 }
-// bubbleSort([8,1,0,6], 8)
+console.log({result});
+
+}
+bubbleSort([8,1,0,6], 4)
