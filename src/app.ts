@@ -4,7 +4,7 @@ import express, { Express, NextFunction, Request, Response } from "express";
 //import routes from "./routes";
 // dotenv.config();
 import {CustomError} from './utils/Errors';
-
+import {cacheManager} from "./cacheManager";
 const app: Express = express();
 const port = process.env.PORT || 3000;
 
