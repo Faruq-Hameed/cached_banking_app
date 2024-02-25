@@ -64,6 +64,7 @@ function bubbleSortA(arr: number[], n: number) : void{
             arr[i+1] = a
             n++;
         }
+        else continue;
         
     }
     }
