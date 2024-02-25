@@ -39,7 +39,6 @@ function bubbleSort(arr: number[], n: number)
                 arr[j] = arr[j + 1];
                 arr[j + 1] = temp;
                 swapped = true;
-                console.log(j)
             }
         }
  
