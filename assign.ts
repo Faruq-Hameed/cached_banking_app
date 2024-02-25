@@ -37,6 +37,7 @@ function bubbleSort(arr: number[], n: number)
                 arr[j] = arr[j + 1];
                 arr[j + 1] = temp;
                 swapped = true;
+                console.log(j)
             }
         }
  
@@ -46,3 +47,6 @@ function bubbleSort(arr: number[], n: number)
         break;
     }
 }
+
+const result = bubbleSort([9,7,5,0,8,10,45,8],8)
+// console.log({result})
