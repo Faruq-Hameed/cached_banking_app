@@ -54,15 +54,20 @@ function bubbleSort(arr: number[], n: number)
 // console.log({result})
 function bubbleSortA(arr: number[], n: number) : void{
     console.log("un swapped array", arr)
-    for (let i = 0; i < n; i++) {
+    let times = 0
+    if (times < n){
+        for (let i = 0; i < n; i++) {
         let a = arr[i], b = arr[i+ 1]
         //swapped if b is less than a
         if (a > b) {
             arr[i] = b;
             arr[i+1] = a
+            n++;
         }
-        console.log((i),{arr})
+        
     }
+    }
+    
   console.log("swapped array", arr)
 }
 bubbleSortA([4,2,8,0, 1], 4)
