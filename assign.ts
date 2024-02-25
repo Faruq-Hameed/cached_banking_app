@@ -23,6 +23,8 @@
 
 function bubbleSort(arr: number[], n: number)
 {
+    console.log(arr, 'un swapped')
+   
     var i, j, temp;
     var swapped;
     for (i = 0; i < n - 1; i++) 
@@ -46,6 +48,7 @@ function bubbleSort(arr: number[], n: number)
         if (swapped == false)
         break;
     }
+    console.log(arr, 'swapped')
 }
 
 const result = bubbleSort([9,7,5,0,8,10,45,8],8)
