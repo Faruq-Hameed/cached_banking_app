@@ -50,11 +50,10 @@ function bubbleSort(arr: number[], n: number)
     console.log(arr, 'swapped')
 }
 
-const result = bubbleSort([9,7,5,0,8,10,45,8],8)
+// const result = bubbleSort([9,7,5,0,8,10,45,8],8)
 // console.log({result})
 function bubbleSortA(arr: number[], n: number) : void{
     console.log("un swapped array", arr)
-
     for (let i = 0; i < n; i++) {
         let a = arr[i], b = arr[i+ 1]
         //swapped if b is less than a
@@ -62,7 +61,8 @@ function bubbleSortA(arr: number[], n: number) : void{
             arr[i] = b;
             arr[i+1] = a
         }
+        console.log((i),{arr})
     }
-    console.log("swapped array", arr)
+  console.log("swapped array", arr)
 }
-bubbleSortA([4,2,8,0], 4)
+bubbleSortA([4,2,8,0, 1], 4)
